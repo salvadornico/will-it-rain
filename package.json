@@ -4,7 +4,9 @@
 	"main": "public/index.html",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc src/get-rain.ts --outDir scripts"
+		"build": "yarn run tsc && yarn run insert-key",
+		"tsc": "tsc src/get-rain.ts --outDir scripts",
+		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
 	},
 	"devDependencies": {
 		"@types/aws-lambda": "^8.10.10",
