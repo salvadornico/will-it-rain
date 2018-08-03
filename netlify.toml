@@ -1,0 +1,4 @@
+[build]
+  Functions = "dist"
+  command = "yarn run build"
+  publish = "dist"
