@@ -5,7 +5,7 @@ interface HelloResponse {
 	body: string
 }
 
-export const hello: Handler = (
+export const handler: Handler = (
 	event: any,
 	context: Context,
 	callback: Callback
@@ -17,6 +17,5 @@ export const hello: Handler = (
 		})
 	}
 
-	console.log(response)
 	callback(undefined, response)
 }
