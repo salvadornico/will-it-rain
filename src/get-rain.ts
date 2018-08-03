@@ -11,10 +11,12 @@ export const handler: Handler = (
 ) => {
 	const darkSkyUrl = `https://api.darksky.net/forecast/${darkSkyKey}/14.6102,121.0736`
 
-	const response: LambdaResponse = {
-		statusCode: 200,
-		body: JSON.stringify(getJson(darkSkyUrl))
-	}
+	getJson(darkSkyUrl).then(data => {
+		const response: LambdaResponse = {
+			statusCode: 200,
+			body: JSON.stringify(data)
+		}
 
-	callback(undefined, response)
+		callback(undefined, response)
+	})
 }
