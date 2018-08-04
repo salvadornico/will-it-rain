@@ -1,6 +1,12 @@
 import { Callback, Context, Handler } from "aws-lambda"
-import { getJson, LambdaResponse } from "./utils"
+import fetch from "node-fetch"
 
+interface LambdaResponse {
+	statusCode: number
+	body: string
+}
+
+const getJson = (url: string) => fetch(url).then(data => data.json())
 // to be replaced during build
 const darkSkyKey = "DARKSKY_TOKEN"
 
