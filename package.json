@@ -10,7 +10,11 @@
 	},
 	"devDependencies": {
 		"@types/aws-lambda": "^8.10.10",
+		"@types/node-fetch": "^2.1.2",
 		"parcel-bundler": "^1.9.7",
 		"typescript": "^3.0.1"
+	},
+	"dependencies": {
+		"node-fetch": "^2.2.0"
 	}
 }

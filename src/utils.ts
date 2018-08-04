@@ -1,3 +1,5 @@
+import fetch from "node-fetch"
+
 export interface LambdaResponse {
 	statusCode: number
 	body: string
