@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "yarn run ts && yarn run insert-key",
-		"ts": "parcel build src/get-rain.ts -d scripts",
+		"ts": "tsc src/get-rain.ts --module System --outFile scripts/get-rain.js",
 		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
 	},
 	"devDependencies": {

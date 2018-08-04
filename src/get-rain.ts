@@ -1,5 +1,5 @@
-import { Callback, Context, Handler } from "aws-lambda";
-import { getJson, LambdaResponse } from "./utils";
+import { Callback, Context, Handler } from "aws-lambda"
+import { getJson, LambdaResponse } from "./utils"
 
 // to be replaced during build
 const darkSkyKey = "DARKSKY_TOKEN"
