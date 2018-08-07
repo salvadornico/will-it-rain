@@ -8,14 +8,7 @@
 		"ts": "tsc src/get-rain.ts --outDir scripts",
 		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
 	},
-	"devDependencies": {
-		"@types/aws-lambda": "^8.10.10",
-		"@types/node-fetch": "^2.1.2",
-		"parcel-bundler": "^1.9.7",
-		"typescript": "^3.0.1"
-	},
 	"dependencies": {
-		"aws-lambda": "^0.1.2",
 		"node-fetch": "^2.2.0"
 	}
 }
