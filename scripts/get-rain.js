@@ -1,4 +1,4 @@
-const fetch = require("node-fetch")
+const fetch = require("../node_modules/node-fetch")
 
 const getJson = url => fetch(url).then(data => data.json())
 // to be replaced during build
