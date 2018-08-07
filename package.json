@@ -4,7 +4,7 @@
 	"main": "public/index.html",
 	"license": "MIT",
 	"scripts": {
-		"build": "yarn run ts && yarn run insert-key",
+		"build": "yarn run insert-key",
 		"ts": "tsc src/get-rain.ts --outDir scripts",
 		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
 	},
