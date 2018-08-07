@@ -15,6 +15,7 @@
 		"typescript": "^3.0.1"
 	},
 	"dependencies": {
+		"aws-lambda": "^0.1.2",
 		"node-fetch": "^2.2.0"
 	}
 }
