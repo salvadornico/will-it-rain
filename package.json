@@ -4,10 +4,16 @@
 	"main": "public/index.html",
 	"license": "MIT",
 	"scripts": {
-		"build": "yarn run insert-key",
-		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
+		"lambda-serve": "netlify-lambda serve src",
+		"build": "NODE_ENV=production webpack && netlify-lambda build src",
+		"dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base public/\" \"yarn run lambda-serve\""
 	},
 	"dependencies": {
+		"dotenv": "^6.0.0",
 		"node-fetch": "^2.2.0"
+	},
+	"devDependencies": {
+		"concurrently": "^3.6.1",
+		"netlify-lambda": "^0.4.0"
 	}
 }
