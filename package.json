@@ -8,6 +8,6 @@
 		"insert-key": "sed -i s/DARKSKY_TOKEN/$DARKSKY_TOKEN/g scripts/get-rain.js"
 	},
 	"dependencies": {
-		"node-fetch": "^2.2.0"
+		"node-fetch": "^3.1.1"
 	}
 }
